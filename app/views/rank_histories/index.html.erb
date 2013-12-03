@@ -1,0 +1,31 @@
+<h1>Listing rank_histories</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Rank</th>
+      <th>Date</th>
+      <th>Number</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @rank_histories.each do |rank_history| %>
+      <tr>
+        <td><%= rank_history.rank %></td>
+        <td><%= rank_history.date %></td>
+        <td><%= rank_history.number %></td>
+        <td><%= link_to 'Show', rank_history %></td>
+        <td><%= link_to 'Edit', edit_rank_history_path(rank_history) %></td>
+        <td><%= link_to 'Destroy', rank_history, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Rank history', new_rank_history_path %>

@@ -1,0 +1,2 @@
+module RankHistoriesHelper
+end
